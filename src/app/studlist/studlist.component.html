@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <header class="header">
+        <nav class="navbar">
+          <!-- <h2 class="logo"><a href="#">EnrolliXCoder</a></h2> -->
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" id="hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <ul class="links">
+            <li><a href="/">Home</a></li>
+            <!-- <li><a href="/about">About Us</a></li> -->
+            <li><a href="/admindash">Admin Dashboard</a></li>
+            <!-- <li><a href="/admin">Admin</a></li> -->
+            <!-- <li class="dropdown">
+              Login
+              <div class="dropdown-content">
+                <a href="/admin">Admin</a>
+                <a href="/studdash">Student</a>
+                
+              </div>
+            </li> -->
+          </ul>
+          
+        </nav>
+      </header>
+
+
+
+
+<section>
+    <!--for demo wrap-->
+    <h1>FULL STACK DEVELOPMENT</h1>
+    <br>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>RegId</th>
+            <th>Name</th>
+            <th>Batch</th>
+            <th>A1</th>
+            <th>A2</th>
+            <th>A3</th>
+            <th>CS1</th>
+            <th>CS2</th>
+            <th>Project</th>
+            <th>Eligibilty</th>
+
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr *ngFor="let i of viewbatch">
+            <td>{{i.regid}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.batch}}</td>
+            <td>{{i.a1}}</td>
+            <td>{{i.a2}}</td>
+            <td>{{i.a3}}</td>
+            <td>{{i.cs1}}</td>
+            <td>{{i.cs2}}</td>
+            <td>{{i.Project}}</td>
+            <td>{{i.Eligibilty}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+  </section>
+   
+  <br>
+  <br>
+  <br><br>
+  <br>
+  <br><br>
+  <br>
+  
+  <!-- follow me template -->
+  <!-- <div class="made-with-love">
+    Download the list
+    <i>♥</i>
+    <a target="_blank" href="https://codepen.io/nikhil8krishnan"></a>
+  </div> -->
+
+</body>
+</html>

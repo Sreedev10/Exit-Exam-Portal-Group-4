@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Other head elements -->
+
+  <style>
+    body {
+      background-image: url('/101.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    /* Add more styles as needed for other elements */
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <h2 class="logo"><a href="/exitadmin"></a></h2>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <ul class="links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/course">Courses</a></li>
+        <!-- <li><a href="/home">Logout</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form #registrationForm="ngForm" (ngSubmit)="add()">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1">Name</label>
+
+                    <input type="text" name="Name" [(ngModel)]="Name" id="form3Example1" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example2">Email address</label>
+
+                    <input type="email" name="Emailaddress" [(ngModel)]="Emailaddress" id="form3Example2" class="form-control" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div>
+                  <br>
+                  <label for="dropdown">Batch</label>
+                  <br>
+                  <select id="dropdown" name="batch" [(ngModel)]="batch" >
+                    <option value="FSD">FSD</option>
+                    <option value="DSA">DSA</option>
+                    <option value="ML/AI">ML/AI</option>
+                    <option value="CSA">CSA</option>
+                    <option value="ST">ST</option>
+                  </select>
+                 
+                </div>
+              </div>
+
+              <label for="gender" class="radio-label">Gender :</label>
+              <div class="form-radio-item">
+                <input type="radio" [(ngModel)]="gender" value="male" name="gender" id="male" checked>
+                <label for="male">Male</label>
+                <span class="check"></span>
+              </div>
+              <div class="form-radio-item">
+                <input type="radio" [(ngModel)]="gender" value="female" name="gender" id="female">
+                <label for="female">Female</label>
+                <span class="check"></span>
+              </div>
+              <br>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example3">Mobile Number</label>
+
+                <input type="text" name="Mobilenumber" id="form3Example3" [(ngModel)]="Mobilenumber" class="form-control" />
+              </div>
+
+              <button type="submit" value="Register" class="btn btn-primary btn-block mb-4">
+                Apply
+              </button>
+
+              <div class="text-center">
+                <p></p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

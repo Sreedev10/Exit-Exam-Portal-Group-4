@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="navbar">
+          <h2 class="logo"><a href="/exitadmin"></a></h2>
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" id="hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/course">Courses</a></li>
+            <li><a href="/condact">Contact us</a></li>
+            <!-- <li><a href="contact">Contact Us</a></li> -->
+            <!-- <li class="dropdown">
+              <a href="#">Login</a>
+              <div class="dropdown-content">
+                <a href="/loginadmin">Admin</a>
+                <a href="/loginstudent">Student</a>
+               
+              </div>
+            </li> -->
+          </ul>
+          
+        </nav>
+      </header>
+ 
+
+
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+       
+
+        <!-- The content half -->
+       
+
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">Exit Exam</h3>
+                            <p class="text-muted mb-4"><b>Best of luck to all students as they embark on their exit exam journey.</b></p>
+                            <form>
+                                <div class="form-group mb-3">
+                                    <input id="regid" name="regid" [(ngModel)]="regid" type="text" placeholder="Registration Id" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                              
+                                <!-- <div>
+                                    <label for="dropdown">BATCH</label>
+                                    <br>
+                                    <select id="dropdown" name="batch" [(ngModel)]="batch" >
+                                      
+                                        <option value="option1">FSD</option>
+                                        <option value="option2">DSA</option>
+                                        <option value="option3">ML/AI</option>
+                                        <option value="option1">CSA</option>
+                                        <option value="option2">ST</option>
+                                    </select>
+                                </div> -->
+                                <br>
+                                <!-- <a href="/details">
+                                    <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Submit</button>
+                                </a>
+                                                            -->
+                                                            
+                                                            <div class="button input-box"  (click)="read()">
+                                                              <input type="submit"  value="SUBMIT">
+                                                            </div>
+                                                            <!-- routerLink="/details" -->
+                                                                                                                  </form>
+                        </div>
+                    </div>
+
+
+            </div>
+       
+
+    </div>
+</div>
+</body>
+</html>
