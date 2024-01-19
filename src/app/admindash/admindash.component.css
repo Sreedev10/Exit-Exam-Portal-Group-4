@@ -14,7 +14,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-image: url('https://wallpapercave.com/wp/wp9609917.jpg');
+    background-image: url('55.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -339,7 +339,7 @@
 .navbar .logo a {
   font-size: 1.8rem;
   text-decoration: none;
-  color: #0f0f0f;
+  color: #f9f8f8;
 }
 
 .navbar .links {

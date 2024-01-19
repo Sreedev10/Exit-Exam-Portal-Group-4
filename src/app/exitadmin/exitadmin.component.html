@@ -39,7 +39,7 @@
    
      
         <div class="wrapper">
-          <form (ngSubmit)="login()" #loginForm="ngForm">
+          <form (ngSubmit)="log()" #loginForm="ngForm">
             <h2>Login</h2>
               <div class="input-field">
                 <input type="email" name="email" [(ngModel)]="credentials.email" required>
@@ -52,7 +52,7 @@
 
             <br><br>
          
-            <button type="submit" (click)="login()">LOGIN</button>
+            <button type="submit" (click)="log()">LOGIN</button>
 
           </form>
         </div>

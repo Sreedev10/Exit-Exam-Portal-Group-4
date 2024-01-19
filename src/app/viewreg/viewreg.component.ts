@@ -7,30 +7,30 @@ import { ApiService } from '../api.service';
   styleUrls: ['./viewreg.component.css']
 })
 export class ViewregComponent implements OnInit {
-        Name=""
-        Emailaddress=""
-        batch=""
-        gender=""
-        Mobilenumber=""
-        
+  viewreg: any[] = [];
+  batchData: any[] = [];
 
-  
-
-
-  constructor(private api:ApiService) { this.dataFromApi()}
-
-  dataFromApi=()=>{
-
-    this.api.view().subscribe(
-
-      response=>{
-
-        this.viewreg=response
-      }
-    )
+  constructor(private api: ApiService) {
+    this.dataFromApi();
   }
 
-viewreg:any=[]
+  dataFromApi = () => {
+    this.api.view().subscribe(
+      response => {
+        this.viewreg = response;
+        this.organizeDataByBatch();
+      }
+    );
+  }
+
+  organizeDataByBatch(): void {
+    const batches = new Set(this.viewreg.map(item => item.batch));
+
+    batches.forEach(batch => {
+      const registrationsForBatch = this.viewreg.filter(item => item.batch === batch);
+      this.batchData.push({ batch, registrations: registrationsForBatch });
+    });
+  }
 
   ngOnInit(): void {
   }

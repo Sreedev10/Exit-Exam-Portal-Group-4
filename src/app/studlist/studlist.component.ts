@@ -8,19 +8,30 @@ import { ApiService } from '../api.service';
 })
 export class StudlistComponent implements OnInit {
 
-  constructor(private api:ApiService) { this.dataFromApi()}
-  dataFromApi=()=>{
+  viewbatch: any[] = [];
+  batchData: any[] = [];
 
-    this.api.viewall().subscribe(
-
-      response=>{
-
-        this.viewbatch=response
-      }
-    )
+  constructor(private api: ApiService) {
+    this.dataFromApi();
   }
 
-viewbatch:any=[]
+  dataFromApi = () => {
+    this.api.viewall().subscribe(
+      response => {
+        this.viewbatch = response;
+        this.organizeDataByBatch();
+      }
+    );
+  }
+
+  organizeDataByBatch(): void {
+    const batches = new Set(this.viewbatch.map(item => item.batch));
+
+    batches.forEach(batch => {
+      const registrationsForBatch = this.viewbatch.filter(item => item.batch === batch);
+      this.batchData.push({ batch, registrations: registrationsForBatch });
+    });
+  }
 
   ngOnInit(): void {
   }

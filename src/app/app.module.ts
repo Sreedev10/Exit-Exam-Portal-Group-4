@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExitRegComponent } from './exit-reg/exit-reg.component';
-import { ExitenquiryComponent } from './exitenquiry/exitenquiry.component';
+// import { ExitenquiryComponent } from './exitenquiry/exitenquiry.component';
 import { ExithomeComponent } from './exithome/exithome.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
@@ -18,7 +18,7 @@ import { AdmindashComponent } from './admindash/admindash.component';
 import { StuddashComponent } from './studdash/studdash.component';
 import { StudlistComponent } from './studlist/studlist.component';
 import { StudcourseComponent } from './studcourse/studcourse.component';
-import { CondactComponent } from './condact/condact.component';
+// import { CondactComponent } from './condact/condact.component';
 import { ViewregComponent } from './viewreg/viewreg.component';
 
 
@@ -27,7 +27,7 @@ import { ViewregComponent } from './viewreg/viewreg.component';
   declarations: [
     AppComponent,
     ExitRegComponent,
-    ExitenquiryComponent,
+    // ExitenquiryComponent,
     ExithomeComponent,
     NavbarComponent,
     ExitdetailsComponent,
@@ -38,7 +38,7 @@ import { ViewregComponent } from './viewreg/viewreg.component';
     StuddashComponent,
     StudlistComponent,
     StudcourseComponent,
-    CondactComponent,
+    // CondactComponent,
     ViewregComponent
   ],
   imports: [

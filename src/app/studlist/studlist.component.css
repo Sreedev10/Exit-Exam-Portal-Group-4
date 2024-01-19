@@ -50,10 +50,11 @@ h1{
     margin: 50px;
   }
   body {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWHzushofHvAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWHzushofHvAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=') center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
 }
   
   /* follow me template */
@@ -111,12 +112,14 @@ h1{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 15px;
-    background-color: transparent; /* Change this line to set the background color to skyblue */
+    background-color: transparent; /* Change this line to set the background color to transparent */
     position: fixed;
     top: 0;
     right: 0;
     left: auto; /* Add this line to ensure it's on the right */
-  }
+    z-index: 1000; /* Add a z-index to ensure it's above other elements */
+}
+
   .navbar .logo a {
     font-size: 1.8rem;
     text-decoration: none;

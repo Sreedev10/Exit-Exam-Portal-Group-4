@@ -21,33 +21,27 @@ export class ExitadminComponent implements OnInit {
     // Additional initialization logic if needed
   }
 
-  login(): void {
-    // Ensure the login method is called
-    console.log('Login method called');
-
-    if (this.credentials.email === 'admin@gmail.com' && this.credentials.password === 'admin') {
-      // Allowed credentials, perform login
-      console.log('Valid credentials');
-      this.api.login(this.credentials).subscribe(
-        (response) => {
-          console.log("Login successful", response);
-
-          this.router.navigate(['/admindash']);
-
-          alert("Login Successfully");
-          // Handle successful login (e.g., redirect to another page)
+  log(): void {
+    if (this.credentials.email && this.credentials.password) {
+      this.api.log(this.credentials).subscribe(
+        (response: any) => {
+          console.log("Login response:", response);
+          if (response.success) {
+            this.router.navigate([response.redirectPath]);
+            alert("Login Successfully");
+          } else {
+            console.error("Login failed", response.message);
+            alert("Invalid credentials. Login failed.");
+          }
         },
         (error) => {
           console.error("Login failed", error);
-
-          // Handle login error (e.g., show error message to the user)
+          alert("Invalid credentials. Login failed.");
         }
       );
     } else {
-      // Invalid credentials
-      console.log("Invalid credentials");
-      // Handle invalid credentials (e.g., show an error message to the user)
-      alert("Invalid credentials. Login failed.");
+      alert('Please enter valid email and password.');
     }
   }
 }
+
